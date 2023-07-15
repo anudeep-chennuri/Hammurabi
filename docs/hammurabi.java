@@ -161,7 +161,6 @@ public class Hammurabi {
 	int item_LandValue = 19;
 
 
-	//hello-test
 
 
 	public static void main(String[] args){
