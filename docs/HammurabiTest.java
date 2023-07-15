@@ -5,18 +5,18 @@ import org.junit.Test;
 import static org.junit.jupiter.api.Assertions.*;
  public class Hammurabi {
 
-     private Hammurabi hammur;
+     private Hammurabi hammurabi;
 
      @Before
      public void setup() {
-         hammur = new Hammurabi();
+         hammurabi = new Hammurabi();
      }
 
      @Test
      public void askHowManyAcresToSellTest() {
          Integer input = 5;
          Integer expected = 5;
-         Integer actual = hammur.askHowManyAcresToSell(input);
+         Integer actual = hammurabi.askHowManyAcresToSell(input);
          Assert.assertEquals(expected, actual);
      }
  }
