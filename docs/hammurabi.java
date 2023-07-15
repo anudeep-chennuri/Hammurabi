@@ -153,6 +153,14 @@ public class Hammurabi {
 //			a.newYear();
 //		a.finished();
 //	}
+
+//starting variables:
+	int item_people = 100;
+	int item_bushelsInStorage = 2800;
+	int item_acresOfLand = 1000;
+	int item_LandValue = 19;
+
+
 	public static void main(String[] args){
 
 	}
