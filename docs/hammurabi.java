@@ -135,15 +135,12 @@ String Summary(int year, int starved, int immigrants, int population, int harves
 		else return false;
 	}
 
-	 public int  immigrants(int population, int acresOwned, int bushels ){
-		 int immigrants = (20 * acresOwned + bushels) / (100 * population) + 1;
-		 return immigrants;
+	 public int  immigrants(int population, int acresOwned, int grainsInStorage){
 
 	}
 
 	 public int harvest(int acres, int bushelsUsedAsSeed){
-     int harvest = acres * (ran.nextInt(6)+1);
-	 return harvest;
+
 
 	}
 
@@ -152,7 +149,7 @@ String Summary(int year, int starved, int immigrants, int population, int harves
 	}
 
 	public int newCostOfLandTest(){
-		return 17 + ran.nextInt(7);
+
 	}
 
 
