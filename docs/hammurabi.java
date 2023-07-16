@@ -1,14 +1,121 @@
 import java.io.IOException;
 import java.util.Scanner;
+import java.util.Random;
 
-// this seems to be an example of a solution that mimics the original BASIC code the author was writing from.
-//
-// it's a great example of Very Bad Java.
-// Do not write Java like this. If you do, do NOT tell people you went to Zip Code.
-// I'm serious.
-// (how the hell would you ever be able to TEST this piece of code?)
-//
+
+
 public class Hammurabi {
+	Scanner scan = new Scanner(System.in);
+	Random ran =new Random();
+
+	public static void main(String[] args) {
+		new Hammurabi().playgame.();
+	}
+	
+	
+	void playgame(){
+
+		//starting variables:
+		int year = 1;
+		int population = 100;
+		int bushels = 2800;
+		int acresOfLand = 1000;
+		int landValue = 19;
+		int immigrants = 0;
+		int starved = 0;
+		int plagueDeath = 0;
+		int bushelsAteByRats = 0;
+		int harvest = 2800;
+		int bushelsUsedAsSeed=0;
+
+	}
+
+
+String message(){
+		String message = "Congratulations, you are the newest ruler of ancient Sumer, elected for a ten year term of office. Your duties are to dispense food, direct farming, and buy and sell land as needed to support your people. Watch out for rat infestiations and the plague! Grain is the general currency, measured in bushels. The following will help you in your decisions:**\n" +
+				" \n" +
+				" Each person needs at least 20 bushels of grain per year to survive**\n" +
+				" Each person can farm at most 10 acres of land**\n" +
+				" It takes 2 bushels of grain to farm an acre of land**\n" +
+				" The market price for land fluctuates yearly**\n" +
+				" \n" +
+				" Rule wisely and you will be showered with appreciation at the end of your term. Rule poorly and you will be kicked out of office!";
+
+		return message;
+	}
+
+String Summary(int year, int starved, int immigrants, int population, int harvest, int bushelsUsedAsSeed, int bushelsAteByRats, int bushels, int acresOfLand, int landValue){
+		String summary = "O great Hammurabi!\n\n"
+				+ "You are in year " + year + " of your ten rule\n"
+				+ "In the previous year " + starved + " people starved to death.\n"
+				+ "In the previous year " + immigrants + " people entered the kingdom.\n"
+				+ "The population is now " + population + ".\n"
+				+ "We harvested " + harvest + " bushels at " + bushelsUsedAsSeed + " bushels per acre.\n"
+				+ "Rats destroyed " + bushelsAteByRats + " bushels, leaving " + bushels + " bushels in storage.\n"
+				+ "The city owns " + acresOfLand + " acres of land.\n"
+				+ "Land is currently worth " + landValue + " bushels per acre.\n";
+
+	return summary;
+
+
+}
+	
+
+
+
+
+
+
+	public void askHowManyAcresToBuy(int price, int bushels){
+
+	}
+
+	public void askHowManyAcresToSell(int acresOwned){
+
+	}
+
+	public void askHowMuchGrainToFeedPeople(int bushels){
+
+	}
+	public void askHowManyAcresToPlant(int acresOwned, int population, int bushels){
+
+	}
+
+	public void plagueDeaths(int population){
+
+	}
+
+	public void starvationDeaths(int population, int bushelsFedToPeople){
+
+	}
+
+	public void uprising(int population, int howManyPeopleStarved){
+
+	}
+
+	public void immigrants(int population, int acresOwned, int grainsInStorage){
+
+	}
+
+	public void harvest(int acres, int bushelsUsedAsSeed){
+
+	}
+
+	public void grainsEatenByRats(int bushels){
+
+	}
+
+	public newCostOfLandTest(){
+
+	}
+
+	public static void main(String[] args){
+
+
+	}
+
+
+}
 //	static int totalDeaths = 0, percentDied = 0, year = 0, population = 95, stores = 2800, immigrants = 5, deaths,
 //		harvest = 3000, yeild = 3, acres = harvest / yeild, eaten = harvest - stores, landPrice, fullPeople, temp;
 //	static boolean plague = false;
@@ -153,54 +260,3 @@ public class Hammurabi {
 //			a.newYear();
 //		a.finished();
 //	}
-
-//starting variables:
-	int item_people = 100;
-	int item_bushelsInStorage = 2800;
-	int item_acresOfLand = 1000;
-	int item_LandValue = 19;
-
-
-
-	public void askHowManyAcresToSellTest(){
-
-	}
-
-	public void askHowMuchGrainToFeedPeopleTest(){
-
-	}
-	public void askHowManyAcresToPlantTest(){
-
-	}
-
-	public void plagueDeathsTest(){
-
-	}
-
-	public void starvationDeathsTest(){
-
-	}
-
-	public void uprisingTest(){
-
-	}
-
-	public void immigrantsTest(){
-
-	}
-
-
-
-
-
-
-
-
-
-	public static void main(String[] args){
-
-
-	}
-
-
-}
