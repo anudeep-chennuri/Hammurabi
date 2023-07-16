@@ -110,8 +110,11 @@ String Summary(int year, int starved, int immigrants, int population, int harves
 	public int askHowManyAcresToPlant(int acresOwned, int population, int bushels){
 		Scanner inputAcresToPlant = new Scanner(System.in);
 		Integer iInputAcresToPlant = inputAcresToPlant.nextInt();
+
 		System.out.println("You have" + acresOwned + ", how many do you want to plant?");
-		if (iInputAcresToPlant >
+		if (iInputAcresToPlant > acresOwned){System.out.print("O great Hammurabi, surely you jest.  You have only " + acresOwned + " acres owned.\nTry again.");}
+		else if (iInputAcresToPlant > population * 10  ){System.out.print("O great Hammurabi, surely you jest.  You have only " + population + " to plant grain.\nTry again.");}
+		else if (iInputAcresToPlant > bushels/2 ){System.out.print("O great Hammurabi, surely you jest.  You have only " + bushels + " bushels owned.\nTry again.");}
 
 	}
 
@@ -120,6 +123,9 @@ String Summary(int year, int starved, int immigrants, int population, int harves
 	}
 
 	public int starvationDeaths(int population, int bushelsFedToPeople){
+		int starvationDeaths= 0;
+		if (population > bushelsFedToPeople/20){ starvationDeaths = population - bushelsFedToPeople /20;}
+		return starvationDeaths;
 
 
 	}
