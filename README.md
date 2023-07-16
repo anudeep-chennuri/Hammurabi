@@ -89,7 +89,7 @@ Here's what your `playGame` method needs to do each year, for up to 10 years:
 > 
 > Ask the player how much grain to feed people, and returns that number. You can't feed them more grain than you have. You **can** feed them more than they need to survive.
 > 
-> `  
+> `  inputGrainsToFeedPeople
 > int askHowManyAcresToPlant(int acresOwned, int population, int bushels)`
 > 
 > Ask the player how many acres to plant with grain, and returns that number. You must have enough acres, enough grain, and enough people to do the planting. Any grain left over goes into storage for next year.

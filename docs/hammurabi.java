@@ -92,9 +92,26 @@ String Summary(int year, int starved, int immigrants, int population, int harves
 	}
 
 	public int askHowMuchGrainToFeedPeople(int bushels){
+		Scanner inputGrainsToFeedPeople = new Scanner(System.in);
+		Integer iInputGrainsToFeedPeople = inputGrainsToFeedPeople.nextInt();
+		System.out.println("Each person needs at least 20 bushels of grain per year to survive");
+		if  (iInputGrainsToFeedPeople > bushels) {
+			System.out.println("HAMURABI:  THINK AGAIN. YOU HAVE ONLY\n" + bushels + "BUSHELS OF GRAIN. ");
+		}
+			else{
+				bushels = bushels - iInputGrainsToFeedPeople;
+		}{
+			return bushels;
+		}
+
+
 
 	}
 	public int askHowManyAcresToPlant(int acresOwned, int population, int bushels){
+		Scanner inputAcresToPlant = new Scanner(System.in);
+		Integer iInputAcresToPlant = inputAcresToPlant.nextInt();
+		System.out.println("You have" + acresOwned + ", how many do you want to plant?");
+		if (iInputAcresToPlant >
 
 	}
 
