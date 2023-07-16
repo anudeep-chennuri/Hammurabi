@@ -162,6 +162,40 @@ public class Hammurabi {
 
 
 
+	public void askHowManyAcresToSellTest(){
+
+	}
+
+	public void askHowMuchGrainToFeedPeopleTest(){
+
+	}
+	public void askHowManyAcresToPlantTest(){
+
+	}
+
+	public void plagueDeathsTest(){
+
+	}
+
+	public void starvationDeathsTest(){
+
+	}
+
+	public void uprisingTest(){
+
+	}
+
+	public void immigrantsTest(){
+
+	}
+
+
+
+
+
+
+
+
 
 	public static void main(String[] args){
 
