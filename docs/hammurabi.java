@@ -67,12 +67,27 @@ String Summary(int year, int starved, int immigrants, int population, int harves
 
 
 	public int askHowManyAcresToBuy(int price, int bushels){
-
-
+			Scanner inputAcresToBuy = new Scanner(System.in);
+			Integer iInputAcresToBuy = inputAcresToBuy.nextInt();
+			if ((2*bushels) <= iInputAcresToBuy ){
+				System.out.println("O Great Hammurabi, surely you jest! We have only " + bushels + " bushels left!");
+			} else {
+				return 0;
+			}
 
 	}
 
 	public  int askHowManyAcresToSell(int acresOwned){
+		Scanner inputAcresToSell = new Scanner(System.in);
+		Integer iInputAcresToSell = inputAcresToSell.nextInt();
+		if ((iInputAcresToSell > acresOwned)){
+			System.out.print("O Great Hammurabi, surely you jest! We have only " + acresOwned + " acres left!");
+		} else {
+			acresOwned = acresOwned - iInputAcresToSell;
+		} return acresOwned;
+
+
+
 
 	}
 
