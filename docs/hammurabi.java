@@ -8,7 +8,7 @@ import java.util.Random;
 
 public class Hammurabi {
 	Scanner scan = new Scanner(System.in);
-	Random ran =new Random();
+	Random ran = new Random();
 
 
 	public static void main(String[] args) {
@@ -63,14 +63,12 @@ String Summary(int year, int starved, int immigrants, int population, int harves
 
 
 }
-	
-
-
-
 
 
 
 	public int askHowManyAcresToBuy(int price, int bushels){
+
+
 
 	}
 
@@ -95,7 +93,7 @@ String Summary(int year, int starved, int immigrants, int population, int harves
 	}
 
 	public boolean uprising(int population, int howManyPeopleStarved){
-		if (howManyPeopleStarved > (population * .45)){ return true;}
+		if (howManyPeopleStarved > (population * .45)){return true;}
 		else return false;
 	}
 
@@ -108,7 +106,7 @@ String Summary(int year, int starved, int immigrants, int population, int harves
 
 	}
 
-	public int  grainsEatenByRats(int bushels){
+	public int grainsEatenByRats(int bushels){
 
 	}
 
@@ -116,10 +114,7 @@ String Summary(int year, int starved, int immigrants, int population, int harves
 
 	}
 
-	public static void main(String[] args){
 
-
-	}
 
 
 }
