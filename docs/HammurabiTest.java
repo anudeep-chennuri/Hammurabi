@@ -66,22 +66,38 @@ public class Hammurabi {
         Assert.assertEquals(expected, actual);
     }
 
+   // @Test
+    //public void  immigrantsTest() {
+        //Integer input = 50;
+       // Integer expected = True;
+       // Integer actual = hammurabi.immigrants(input);
+        //Assert.assertEquals(expected, actual);
+    //}
+   @Test
+   public void harvestTest() {
+       Integer input = 50;
+       Integer expected =150;
+       Integer actual = hammurabi.harvest(input);
+       Assert.assertEquals(expected, actual);
+   }
     @Test
-    public void  immigrantsTest() {
-        Integer input = 50;
-        Integer expected = True;
-        Integer actual = hammurabi. immigrants(input);
+    public void grainEatenByRatsTest() {
+        Integer input =0;
+        Integer expected = 0;
+        Integer actual = hammurabi.harvest(input);
         Assert.assertEquals(expected, actual);
     }
+    @Test
+    public void newCostOfLandTest() {
+        Integer input =0;
+        Integer expected = 0;
+        Integer actual = hammurabi.newCostOfLand(input);
+        Assert.assertEquals(expected, actual);
+    }
+}
 
 
-
-
-
-        }
-
-
-   /* int askHowManyAcresToBuy(int price, int bushels)/
+   /* int askHowManyAcresToBuy(int price, int bushels)
 
     int askHowManyAcresToSell(int acresOwned)
 
