@@ -1,68 +1,72 @@
-package hammurabi.docs;
+
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-public class Hammurabi {
+public class TestHammurabi {
 
-     private Hammurabi hammurabi;
+     Hammurabi hamm;
+
+    boolean about(double expected, double actual) {
+        return actual > 0.90 * expected && actual < 1.10 * expected;
 
      @Before
-     public void setup() {
-         hammurabi = new Hammurabi();
+     @Before
+        public void setUp() throws Exception {
+            hamm = new Hammurabi();
      }
      @Test
-     public void askHowManyAcresToBuyTest() {
+     public final void askHowManyAcresToBuyTest() {
          Integer input = 10;
          Integer expected = 10;
-         Integer actual = hammurabi.askHowManyAcresToBuy(input);
+         Integer actual = hamm.askHowManyAcresToBuy(input);
          Assert.assertEquals(expected, actual);
      }
 
      @Test
-     public void askHowManyAcresToSellTest() {
+     public final void askHowManyAcresToSellTest() {
          Integer input = 5;
          Integer expected = 5;
-         Integer actual = hammurabi.askHowManyAcresToSell(input);
+         Integer actual = hamm.askHowManyAcresToSell(input);
          Assert.assertEquals(expected, actual);
      }
 
     @Test
-    public void askHowMuchGrainToFeedPeopleTest() {
+    publicc final void askHowMuchGrainToFeedPeopleTest() {
         Integer input = 3;
         Integer expected = 3;
-        Integer actual = hammurabi.askHowMuchGrainToFeedPeople(input);
+        Integer actual = hamm.askHowMuchGrainToFeedPeople(input);
         Assert.assertEquals(expected, actual);
     }
     @Test
-    public void askHowManyAcresToPlantTest() {
+    public final void askHowManyAcresToPlantTest() {
         Integer input = 2;
         Integer expected = 2;
-        Integer actual = hammurabi.askHowManyAcresToPlant(input);
+        Integer actual = hamm.askHowManyAcresToPlant(input);
         Assert.assertEquals(expected, actual);
     }
 
     @Test
-    public void plagueDeathsTest() {
+    public final void plagueDeathsTest() {
         Integer input = 65;
         Integer expected = 65;
-        Integer actual = hammurabi.plagueDeaths();t(input);
+        Integer actual = hamm.plagueDeaths();t(input);
         Assert.assertEquals(expected, actual);
     }
 
     @Test
-    public void starvationDeathsTest() {
+    public final void starvationDeathsTest() {
         Integer input = 65;
         Integer expected = 65;
-        Integer actual = hammurabi.starvationDeaths(input);
+        Integer actual = hamm.starvationDeaths(input);
         Assert.assertEquals(expected, actual);
     }
 
     @Test
-    public void uprisingTest() {
+    public final void uprisingTest() {
         Integer input = 50;
         Integer expected = True;
-        Integer actual = hammurabi.uprising(input);
+        Integer actual = hamm.uprising(input);
         Assert.assertEquals(expected, actual);
     }
 
@@ -74,27 +78,27 @@ public class Hammurabi {
         //Assert.assertEquals(expected, actual);
     //}
    @Test
-   public void harvestTest() {
+   public final void harvestTest() {
        Integer input = 50;
        Integer expected =150;
-       Integer actual = hammurabi.harvest(input);
+       Integer actual = hamm.harvest(input);
        Assert.assertEquals(expected, actual);
    }
     @Test
-    public void grainEatenByRatsTest() {
+    public final void grainEatenByRatsTest() {
         Integer input =0;
         Integer expected = 0;
-        Integer actual = hammurabi.harvest(input);
+        Integer actual = hamm.harvest(input);
         Assert.assertEquals(expected, actual);
     }
     @Test
-    public void newCostOfLandTest() {
+    public final void newCostOfLandTest() {
         Integer input =0;
         Integer expected = 0;
-        Integer actual = hammurabi.newCostOfLand(input);
+        Integer actual = hamm.newCostOfLand(input);
         Assert.assertEquals(expected, actual);
     }
-}
+}}
 
 
    /* int askHowManyAcresToBuy(int price, int bushels)

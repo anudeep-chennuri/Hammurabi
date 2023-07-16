@@ -1,6 +1,8 @@
+package hammurabi.docs;
 import java.io.IOException;
 import java.util.Scanner;
 import java.util.Random;
+
 
 
 
@@ -8,12 +10,14 @@ public class Hammurabi {
 	Scanner scan = new Scanner(System.in);
 	Random ran =new Random();
 
+
 	public static void main(String[] args) {
-		new Hammurabi().playgame.();
+		new Hammurabi.playGame();
 	}
-	
-	
-	void playgame(){
+
+
+
+		void playgame(){
 
 		//starting variables:
 		int year = 1;
@@ -66,46 +70,49 @@ String Summary(int year, int starved, int immigrants, int population, int harves
 
 
 
-	public void askHowManyAcresToBuy(int price, int bushels){
+	public int askHowManyAcresToBuy(int price, int bushels){
 
 	}
 
-	public void askHowManyAcresToSell(int acresOwned){
+	public  int askHowManyAcresToSell(int acresOwned){
 
 	}
 
-	public void askHowMuchGrainToFeedPeople(int bushels){
+	public int askHowMuchGrainToFeedPeople(int bushels){
 
 	}
-	public void askHowManyAcresToPlant(int acresOwned, int population, int bushels){
-
-	}
-
-	public void plagueDeaths(int population){
+	public int askHowManyAcresToPlant(int acresOwned, int population, int bushels){
 
 	}
 
-	public void starvationDeaths(int population, int bushelsFedToPeople){
+	public int  plagueDeaths(int population){
 
 	}
 
-	public void uprising(int population, int howManyPeopleStarved){
+	public int starvationDeaths(int population, int bushelsFedToPeople){
+
 
 	}
 
-	public void immigrants(int population, int acresOwned, int grainsInStorage){
+	public boolean uprising(int population, int howManyPeopleStarved){
+		if (howManyPeopleStarved > (population * .45)){ return true;}
+		else return false;
+	}
+
+	 public int  immigrants(int population, int acresOwned, int grainsInStorage){
 
 	}
 
-	public void harvest(int acres, int bushelsUsedAsSeed){
+	 public int harvest(int acres, int bushelsUsedAsSeed){
+
 
 	}
 
-	public void grainsEatenByRats(int bushels){
+	public int  grainsEatenByRats(int bushels){
 
 	}
 
-	public newCostOfLandTest(){
+	public int newCostOfLandTest(){
 
 	}
 
