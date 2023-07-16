@@ -270,7 +270,7 @@ String Summary(int year, int starved, int immigrants, int population, int harves
 //		System.exit(0);
 //	}
 //
-//	private void finished() {
+//	private void finished() {/
 //		String answer = "IN YOUR 10-YEAR TERM OF OFFICE, " + percentDied + " PERCENT OF THE\n" +
 //			"POPULATION STARVED PER YEAR ON AVERAGE, I.E., A TOTAL OF\n" +
 //			totalDeaths + " PEOPLE DIED!!\n" +
