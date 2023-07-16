@@ -115,7 +115,7 @@ String Summary(int year, int starved, int immigrants, int population, int harves
 		if (iInputAcresToPlant > acresOwned){System.out.print("O great Hammurabi, surely you jest.  You have only " + acresOwned + " acres owned.\nTry again.");}
 		else if (iInputAcresToPlant > population * 10  ){System.out.print("O great Hammurabi, surely you jest.  You have only " + population + " to plant grain.\nTry again.");}
 		else if (iInputAcresToPlant > bushels/2 ){System.out.print("O great Hammurabi, surely you jest.  You have only " + bushels + " bushels owned.\nTry again.");}
-
+!!!!!!
 	}
 
 	public int  plagueDeaths(int population){
@@ -135,12 +135,15 @@ String Summary(int year, int starved, int immigrants, int population, int harves
 		else return false;
 	}
 
-	 public int  immigrants(int population, int acresOwned, int grainsInStorage){
+	 public int  immigrants(int population, int acresOwned, int bushels ){
+		 int immigrants = (20 * acresOwned + bushels) / (100 * population) + 1;
+		 return immigrants;
 
 	}
 
 	 public int harvest(int acres, int bushelsUsedAsSeed){
-
+     int harvest = acres * (ran.nextInt(6)+1);
+	 return harvest;
 
 	}
 
@@ -149,7 +152,7 @@ String Summary(int year, int starved, int immigrants, int population, int harves
 	}
 
 	public int newCostOfLandTest(){
-
+		return 17 + ran.nextInt(7);
 	}
 
 
@@ -199,13 +202,13 @@ String Summary(int year, int starved, int immigrants, int population, int harves
 //				System.out.println("HAMURABI:  THINK AGAIN. YOU HAVE ONLY\n" +
 //						stores + " BUSHELS OF GRAIN. NOW THEN,");
 //		} while (temp > stores);
-//		fullPeople = temp / 20;
+//		fullPeople = temp / 20;lsl
 //		stores -= temp;
 //		do {
 //			System.out.print("\nHOW MANY ACRES DO YOU WISH TO PLANT WITH SEED?  ");
-//			temp = input.nextInt();
+//			temp = input.nextInt();ngel bynum
 //			if (temp < 0)
-//				epicFail(0);
+//				epicFail(0);/
 //			if (temp > acres)
 //				System.out.println("HAMURABI:  THINK AGAIN. YOU OWN ONLY " + acres + " ACRES. NOW THEN,");
 //			if (temp / 2 > stores)
