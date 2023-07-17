@@ -69,7 +69,9 @@ String Summary(int year, int starved, int immigrants, int population, int harves
 	public int askHowManyAcresToBuy(int price, int bushels){
 			Scanner inputAcresToBuy = new Scanner(System.in);
 			Integer iInputAcresToBuy = inputAcresToBuy.nextInt();
-			if ((2*bushels) <= iInputAcresToBuy ){
+			boolean checkAskHowManyAcresToBuy = true;
+
+			do{if ((2*bushels) <= iInputAcresToBuy ){
 				System.out.println("O Great Hammurabi, surely you jest! We have only " + bushels + " bushels left!");
 			} else {
 				return 0;
