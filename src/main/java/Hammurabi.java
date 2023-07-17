@@ -1,4 +1,5 @@
 package hammurabi.src.main.java;
+import java.sql.SQLOutput;
 import java.util.Scanner;
 import java.util.Random;
 
@@ -33,6 +34,7 @@ public class Hammurabi {
 
 		System.out.println(message());
 		int acresBought = (askHowManyAcresToBuy(price,bushels));
+		System.out.println(askHowManyAcresToSell(acresOfLand));
 
 
 
@@ -73,13 +75,14 @@ public class Hammurabi {
 
 	public int askHowManyAcresToBuy(int price, int bushels) {
 
-		boolean checkAskHowManyAcresToBuy = true;
-		Integer iInputAcresToBuy = 0;
+		boolean checkAskHowManyAcresToBuy;
+		Integer iInputAcresToBuy;
 
 		do {
 			System.out.println("How many Acres would you like to buy?");
 			iInputAcresToBuy = scan.nextInt();
 			checkAskHowManyAcresToBuy = true;
+
 			if ((2 * bushels) <= iInputAcresToBuy) {
 				System.out.println("O Great Hammurabi, surely you jest! We have only " + bushels + " bushels left!");
 				checkAskHowManyAcresToBuy = false;
@@ -96,22 +99,25 @@ public class Hammurabi {
 
 	public int askHowManyAcresToSell(int acresOwned) {
 		boolean checkAcresSold = true;
-		Scanner inputAcresToSell = new Scanner(System.in);
+		int iInputAcresToSell;
 
-		Integer iInputAcresToSell = inputAcresToSell.nextInt();
+		do {
+			System.out.println("How many Acres would you like to sell?");
+			iInputAcresToSell = scan.nextInt();
 
-
-		if ((iInputAcresToSell > acresOwned)) {
-			System.out.print("O Great Hammurabi, surely you jest! We have only " + acresOwned + " acres left!");
-		} else {
-			acresOwned = acresOwned - iInputAcresToSell;
+			if ((iInputAcresToSell > acresOwned)) {
+				System.out.print("O Great Hammurabi, surely you jest! We have only " + acresOwned + " acres left!");
+				checkAcresSold = false;
+			}
 		}
-		return acresOwned;
+		while(!checkAcresSold);
+		return iInputAcresToSell;
 
 
 	}
 
 	public int askHowMuchGrainToFeedPeople(int bushels) {
+		boolean checkGrainToFeedPeople = true;
 		Scanner inputGrainsToFeedPeople = new Scanner(System.in);
 		Integer iInputGrainsToFeedPeople = inputGrainsToFeedPeople.nextInt();
 		System.out.println("Each person needs at least 20 bushels of grain per year to survive");
@@ -175,10 +181,10 @@ public class Hammurabi {
 
 	}
 
-//			public int grainsEatenByRats ( int bushels){
-//
-//
-//			}
+	public int grainsEatenByRats ( int bushels ){
+
+
+	}
 
 	public int newCostOfLand() {
 		return 17 + ran.nextInt(7);
